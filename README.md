@@ -1,4 +1,5 @@
 ---"Raspliance Core"---
+
 Raspliance Core is a remix of Raspian/Raspbian that intends to make the most of Raspberry Pi's potentials as a server platform.
 
 It's as much a remix of Raspian/Raspbian as it is of TurnKey Linux Core 12.0, which it's modeled after.
@@ -6,15 +7,18 @@ It's as much a remix of Raspian/Raspbian as it is of TurnKey Linux Core 12.0, wh
 The devs at Turnkey Linux have made an art of the dedicated appliance platform; I've tried to follow their lead while relying heavily on their code and wise decisions.
 
 ---Calibre---
+
 Ebook management, reader, maker, server. This patch installs calibre to /opt/calibre, and configures it to startup on boot with daemon in /etc/init.d. The server will look for a calibre library in /var/calibre-data. Calibre is configured to listen on port 80; no username or password is configured by default.
 
 This is built with the expectation that a calibre library and database will be managed in another machine, and that the library will be synced with rsync or another tool.
+
+In addition to Calibre on port 80: shellinabox (:12320), webmin (:12321). Also, TKL inithook mechanism configures root password on first boot. Confconsole displays your IP and directory of services.
 
 ---Use---
 Run compile_tklpatch.sh in order to make the tool to apply this patch to raspian. or raspbian.
 
 Use this command to apply the patch (assuming your in the directory with the git clone):
-tklpatch-apply / ./core/
+tklpatch-apply / ./raspi-calibre/
 This applies the root directory to your running instance of raspian. Don't quit reading here.
 
 ---Contents---
@@ -37,6 +41,7 @@ compile_tklpatch.sh compiles tklpatch, the SDK developed by TurnKey Linux and wh
 3. You have logged in as root.
 4. You have installed git by doing apt-get install git.
 5. You're starting from a fresh .img of Raspian.
+6. You have resized your partition: 2 gig doesn't do it.
 
 ---Known Problems---
 1. Can't log in to shellinabox as root. Don't know why.
