@@ -30,7 +30,7 @@ compile_tklpatch.sh compiles tklpatch, the SDK developed by TurnKey Linux and wh
 3. change directory to /tmp/tklpatch
 4. go to the users home directory
 
----core/---
+---raspi-calibre---
 1. Includes an overlay that injects webmin - and relevant modules - and a theme - into the file system. These components are lifted directly out of a running instance of Turnkey Linux Core 12.0 (squeeze).
 2. Includes an overlay that inject .bashrc etc files into /root and /etc/skel.
 3. Inject the modified services.txt file for confconsole into /etc/confconsole.
