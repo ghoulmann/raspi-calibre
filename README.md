@@ -8,7 +8,7 @@ The devs at Turnkey Linux have made an art of the dedicated appliance platform; 
 
 ---Calibre---
 
-Doesn't work yet: problem with /etc/init.d/calibre!
+Update: Now install calibre from repos. Corrected /etc/init.d/calibre.
 
 Ebook management, reader, maker, server. This patch installs calibre to /opt/calibre, and configures it to startup on boot with daemon in /etc/init.d. The server will look for a calibre library in /var/calibre-data. Calibre is configured to listen on port 80; no username or password is configured by default.
 
