@@ -251,7 +251,8 @@ install acpid \
 	qt4-dev-tools \
 	python-setuptools \
 	xdg-utils \
-	imagemagick
+	imagemagick \
+	calibre
 
 #Install Python-Dialog
 mkdir /tmp/pythondialog
@@ -326,7 +327,7 @@ sed -i "s|4200|12320|" /etc/default/shellinabox
 
 #Install calibre to /opt/calibre
 #Install Calibre to /opt/calibre
-python -c "import sys; py3 = sys.version_info[0] > 2; u = __import__('urllib.request' if py3 else 'urllib', fromlist=1); exec(u.urlopen('http://status.calibre-ebook.com/linux_installer').read()); main(install_dir='/opt')"
+#python -c "import sys; py3 = sys.version_info[0] > 2; u = __import__('urllib.request' if py3 else 'urllib', fromlist=1); exec(u.urlopen('http://status.calibre-ebook.com/linux_installer').read()); main(install_dir='/opt')"
 #Create a place for calibre library
 mkdir /var/calibre-data
 #Startup service in init.d
